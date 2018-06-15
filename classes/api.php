@@ -38,7 +38,7 @@ class api {
      * @return array
      * @throws dml_exception
      */
-    public static function get_context_levels_that_have_associated_roles(): array {
+    public static function get_context_levels_that_have_associated_roles() {
         global $DB;
 
         $sql = 'SELECT DISTINCT rcl.contextlevel
@@ -56,7 +56,7 @@ class api {
      * @return array
      * @throws dml_exception
      */
-    public static function get_context_level_roles($contextlevel): array {
+    public static function get_context_level_roles($contextlevel) {
         global $DB;
 
         $sql = 'SELECT rcl.roleid, rcl.contextlevel, r.name, r.shortname
@@ -74,7 +74,7 @@ class api {
     /**
      * @return coursecat[]
      */
-    public static function get_all_course_categories(): array {
+    public static function get_all_course_categories() {
         return array_map(function ($coursecategory) {
             return $coursecategory->name;
         }, coursecat::get_all(['returnhidden' => true]));
@@ -83,7 +83,7 @@ class api {
     /**
      * @return array
      */
-    public static function get_all_courses(): array {
+    public static function get_all_courses() {
         return array_map(function ($course) {
             return $course->fullname;
         }, get_courses());
@@ -98,7 +98,7 @@ class api {
      * @throws coding_exception
      * @throws dml_exception
      */
-    public static function bulk_unassign_role($users, $contextlevel, $instanceid, $roleid): bool {
+    public static function bulk_unassign_role($users, $contextlevel, $instanceid, $roleid) {
         $contexts = self::get_contexts_by_level_and_instanceid($contextlevel, $instanceid);
         foreach ($users as $userid) {
             foreach ($contexts as $contextid => $context) {
@@ -118,7 +118,7 @@ class api {
      * @throws dml_exception
      * @throws coding_exception
      */
-    public static function bulk_assign_role($users, $contextlevel, $instanceid, $roleid): bool {
+    public static function bulk_assign_role($users, $contextlevel, $instanceid, $roleid) {
         $contexts = self::get_contexts_by_level_and_instanceid($contextlevel, $instanceid);
         foreach ($users as $userid) {
             foreach ($contexts as $contextid => $context) {
@@ -160,7 +160,7 @@ class api {
      * @throws coding_exception
      * @throws dml_exception
      */
-    private static function role_assign($roleid, $userid, $contextid, $component = '', $itemid = 0, $timemodified = ''): int {
+    private static function role_assign($roleid, $userid, $contextid, $component = '', $itemid = 0, $timemodified = '') {
         global $USER, $DB;
 
         // first of all detect if somebody is using old style parameters

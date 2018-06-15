@@ -27,5 +27,5 @@ defined('MOODLE_INTERNAL') || die();
 $plugin->component = 'tool_userbulkrolechange';
 $plugin->release = '0.1.0';
 $plugin->version = 2018061402;
-$plugin->requires = 2018051700;
+$plugin->requires = 2017051500.00;
 $plugin->maturity = MATURITY_ALPHA;

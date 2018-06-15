@@ -46,7 +46,7 @@ class external extends core_external_api {
         ]);
     }
 
-    public static function get_context_level_roles($contextlevel): array {
+    public static function get_context_level_roles($contextlevel) {
         $params = self::validate_parameters(self::get_context_level_roles_parameters(), ['contextlevel' => $contextlevel]);
         $contextlevel = $params['contextlevel'];
 
@@ -85,7 +85,7 @@ class external extends core_external_api {
         return new external_function_parameters(array());
     }
 
-    public static function get_all_course_categories(): array {
+    public static function get_all_course_categories() {
 
         $systemcontext = context_system::instance();
         self::validate_context($systemcontext);
@@ -122,7 +122,7 @@ class external extends core_external_api {
         return new external_function_parameters([]);
     }
 
-    public static function get_all_courses(): array {
+    public static function get_all_courses() {
 
         $systemcontext = context_system::instance();
         self::validate_context($systemcontext);
@@ -176,7 +176,7 @@ class external extends core_external_api {
      * @throws required_capability_exception
      * @throws restricted_context_exception
      */
-    public static function bulk_unassign_role($contextlevel, $role, $instance): array {
+    public static function bulk_unassign_role($contextlevel, $role, $instance) {
         global $SESSION;
 
         $params = self::validate_parameters(self::bulk_unassign_role_parameters(), [
@@ -236,7 +236,7 @@ class external extends core_external_api {
      * @throws required_capability_exception
      * @throws restricted_context_exception
      */
-    public static function bulk_assign_role($contextlevel, $role, $instance): array {
+    public static function bulk_assign_role($contextlevel, $role, $instance) {
         global $SESSION;
 
         $params = self::validate_parameters(self::bulk_assign_role_parameters(), [

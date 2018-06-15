@@ -25,7 +25,7 @@ require_once($CFG->libdir . '/datalib.php');
 require_once($CFG->dirroot . '/' . $CFG->admin . '/user/user_bulk_forms.php');
 
 class user_bulk_rolechange_form extends user_bulk_action_form {
-    public function definition(): void {
+    public function definition() {
         $mform =& $this->_form;
 
         $syscontext = context_system::instance();
@@ -42,7 +42,7 @@ class user_bulk_rolechange_form extends user_bulk_action_form {
 }
 
 class pick_role_and_context_form extends moodleform {
-    public function definition(): void {
+    public function definition() {
         $mform =& $this->_form;
         $contextlevels = $this->_customdata['contextlevels'];
         $roles = $this->_customdata['roles'];

@@ -14,6 +14,12 @@
 // You should have received a copy of the GNU General Public License
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
+/**
+ * @package     tool_userbulkrolechange
+ * @copyright   2018 3iPunt Mitxel Moriana <mitxel@tresipunt.com>
+ * @license     http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
+ */
+
 namespace tool_userbulkrolechange;
 
 use coding_exception;
@@ -21,7 +27,6 @@ use context;
 use context_helper;
 use coursecat;
 use dml_exception;
-use Horde\Socket\Client\Exception;
 use stdClass;
 
 \defined('MOODLE_INTERNAL') || die();

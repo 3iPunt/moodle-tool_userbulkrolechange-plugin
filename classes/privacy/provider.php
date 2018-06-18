@@ -15,11 +15,9 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
- * Privacy Subsystem implementation for tool_spamcleaner.
- *
- * @package    tool_spamcleaner
- * @copyright  2018 Zig Tan <zig@moodle.com>
- * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
+ * @package     tool_userbulkrolechange
+ * @copyright   2018 3iPunt Mitxel Moriana <mitxel@tresipunt.com>
+ * @license     http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
 namespace tool_userbulkrolechange\privacy;
@@ -27,10 +25,11 @@ namespace tool_userbulkrolechange\privacy;
 \defined('MOODLE_INTERNAL') || die();
 
 /**
- * Privacy Subsystem for tool_spamcleaner implementing null_provider.
+ * Privacy Subsystem for tool_userbulkrolechange implementing null_provider.
  *
- * @copyright  2018 Zig Tan <zig@moodle.com>
- * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
+ * @package     tool_userbulkrolechange
+ * @copyright   2018 3iPunt Mitxel Moriana <mitxel@tresipunt.com>
+ * @license     http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 class provider implements \core_privacy\local\metadata\null_provider {
 

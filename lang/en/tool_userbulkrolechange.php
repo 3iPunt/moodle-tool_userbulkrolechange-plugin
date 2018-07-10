@@ -33,3 +33,4 @@ $string['roleunassigninfo'] = 'Choose the role to be unassigned from the selecte
 $string['allcategories'] = 'All course categories';
 $string['allcourses'] = 'All courses';
 $string['instance'] = 'Instance';
+$string['privacy:metadata'] = 'The user bulk role change plugin does not store any personal data.';
